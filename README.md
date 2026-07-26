@@ -37,15 +37,15 @@ Snake/
 
 This is a Windows-only console application (it relies on `windows.h` and `conio.h` for
 input and rendering). There is no project file checked in, so build it directly from the
-sources:
+sources.
 
-- **Visual Studio**: create a new empty C++ console project, add `Snake/game.cpp` and
-  `Snake/GameObjects.h` to it, then build and run.
-- **MinGW / g++** (from a Windows terminal):
-  ```bash
-  g++ Snake/game.cpp -o snake.exe
-  ./snake.exe
-  ```
+- **Visual Studio** (recommended): create a new empty C++ console project, add
+  `Snake/game.cpp` and `Snake/GameObjects.h` to it, then build and run. The code's style
+  (`_setmode`/`_fileno`, wide-character console output) matches an MSVC console project,
+  so this is the most reliable path.
+- **MinGW / g++**: not verified — `_setmode`/`_fileno` are used without including `<io.h>`,
+  so a plain `g++ Snake/game.cpp -o snake.exe` may fail to compile and could need an extra
+  `#include <io.h>`.
 
 Run the resulting executable in a terminal that supports wide/UTF-16 output, since the
 board is drawn with box-drawing characters.
