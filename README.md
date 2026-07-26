@@ -1,6 +1,13 @@
 # Imitation of a Snake
 
+![Language](https://img.shields.io/badge/language-C%2B%2B-blue)
+![Platform](https://img.shields.io/badge/platform-Windows-0078D6)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 A Windows console memory/maze puzzle written in C++, inspired by the classic Snake game.
+
+A graphical version of this same game also exists:
+[The graphic phase of the snake imitation game](https://github.com/fateme529/The-graphic-phase-of-the-snake-imitation-game).
 
 ## How it works
 
